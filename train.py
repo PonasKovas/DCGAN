@@ -13,7 +13,7 @@ from model import GAN
 from dataset import Dataset,view_samples
 
 data_dir = 'data/'
-real_size = (32,32,3)
+real_size = (8,8,4)
 z_size = 100
 learning_rate = 0.0002
 batch_size = 128
@@ -26,8 +26,8 @@ if not isdir(data_dir):
 
 images=np.array([cv2.resize((cv2.imread("data/"+tmp, cv2.IMREAD_COLOR)),(32, 32))
                                                for tmp in os.listdir("data")])
-trainset = images[:3000]
-testset = images[3000:]
+trainset = images
+testset = images
 
 
 idx = np.random.randint(0, len(trainset), size=36)
