@@ -12,7 +12,7 @@ from model import GAN
  
 
 data_dir = 'data/'
-real_size = (32,32,3)
+real_size = (8,8,4)
 z_size = 100
 learning_rate = 0.0002
 alpha = 0.2
